@@ -1,0 +1,54 @@
+# Ignore Gradle build directories
+**/build/
+**/out/
+
+# Ignore IntelliJ IDEA project files
+**/.idea/
+**/*.iml
+
+.idea
+
+# Ignore Gradle Wrapper files
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Ignore log files
+**/*.log
+
+# Ignore temporary files
+**/.DS_Store
+**/Thumbs.db
+
+# Ignore user-specific files
+**/.env
+**/.env.local
+**/.vscode/
+**/.history/
+
+# Ignore IDE specific files
+**/.project
+**/.classpath
+**/.factorypath
+**/.settings/
+
+# Ignore generated files
+**/*.class
+**/*.war
+**/*.ear
+
+# Ignore other specific files or directories
+**/target/
+**/out/
+**/.mvn/
+**/.gradle/
+**/node_modules/
+
+# Ignore OS-specific files
+**/.DS_Store
+**/Thumbs.db
+
+# Ignore backup files
+**/*~
+**/*.swp
+**/*.swo
+
