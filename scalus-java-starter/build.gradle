@@ -1,0 +1,15 @@
+subprojects {
+    apply plugin: 'java'
+
+    repositories {
+        mavenCentral()
+    }
+
+    version = '0.1.0'
+    group = 'com.example'
+
+    // Common dependencies (if any)
+    dependencies {
+
+    }
+}

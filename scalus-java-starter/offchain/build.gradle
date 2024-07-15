@@ -1,0 +1,13 @@
+apply plugin: 'java'
+
+// Java module specific dependencies
+dependencies {
+    implementation project(':validators')
+    implementation "org.scalus:scalus-bloxbean-cardano-client-lib_3:0.7.0"
+    implementation 'com.bloxbean.cardano:cardano-client-lib:0.5.1'
+    implementation 'com.bloxbean.cardano:cardano-client-backend-blockfrost:0.5.1'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params'
+}

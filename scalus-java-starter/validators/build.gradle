@@ -1,0 +1,29 @@
+apply plugin: 'scala'
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    scalaCompilerPlugin
+}
+
+dependencies {
+    implementation 'org.scala-lang:scala3-library_3:3.3.2'
+
+    implementation 'org.scalus:scalus_3:0.7.0'
+
+    scalaCompilerPlugins "org.scalus:scalus-plugin_3:0.7.0"
+
+    testImplementation 'org.scalatest:scalatest_3:3.2.17'
+    testImplementation 'org.scalatestplus:scalacheck-1-16_3:3.2.14.0'
+    testImplementation 'com.vladsch.flexmark:flexmark-all:0.64.8'
+
+}
+
+// Configure the Scala compile task to use the compiler plugins
+compileScala {
+    scalaCompileOptions.additionalParameters = configurations.scalaCompilerPlugin.collect {
+        "-Xplugin:" + it.absolutePath
+    }
+}
